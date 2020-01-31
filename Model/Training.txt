@@ -1,0 +1,66 @@
+C:\Users\VARUN\Desktop\Brain Tumor\Code>python36 Model.py
+Epoch 1/15
+2020-01-03 09:46:03.787777: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+253/253 [==============================] - 1s 5ms/step - loss: 0.6541 - acc: 0.5810
+Epoch 2/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.6003 - acc: 0.6996
+Epoch 3/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.5274 - acc: 0.7628
+Epoch 4/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.5079 - acc: 0.7708
+Epoch 5/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.4525 - acc: 0.7945
+Epoch 6/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.4020 - acc: 0.8221
+Epoch 7/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.3757 - acc: 0.8221
+Epoch 8/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.3651 - acc: 0.8696
+Epoch 9/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.2744 - acc: 0.8854
+Epoch 10/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.2043 - acc: 0.9130
+Epoch 11/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.1960 - acc: 0.9447
+Epoch 12/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.1521 - acc: 0.9407
+Epoch 13/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.1591 - acc: 0.9407
+Epoch 14/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.1056 - acc: 0.9486
+Epoch 15/15
+253/253 [==============================] - 1s 2ms/step - loss: 0.0939 - acc: 0.9684
+WARNING:tensorflow:TensorFlow optimizers do not make it possible to access optimizer attributes or optimizer state after instantiation. As a result, we cannot save the optimizer as part of the model save file.You will have to compile your model again after loading it. Prefer using a Keras optimizer instead (see keras.io/optimizers).
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+conv2d (Conv2D)              (None, 29, 29, 32)        160
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 14, 14, 32)        0
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 12, 12, 64)        18496
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 6, 6, 64)          0
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 4, 4, 64)          36928
+_________________________________________________________________
+dropout (Dropout)            (None, 4, 4, 64)          0
+_________________________________________________________________
+flatten (Flatten)            (None, 1024)              0
+_________________________________________________________________
+dense (Dense)                (None, 512)               524800
+_________________________________________________________________
+dense_1 (Dense)              (None, 128)               65664
+_________________________________________________________________
+dense_2 (Dense)              (None, 128)               16512
+_________________________________________________________________
+dense_3 (Dense)              (None, 2)                 258
+=================================================================
+Total params: 662,818
+Trainable params: 662,818
+Non-trainable params: 0
+_________________________________________________________________
+100/100 [==============================] - 0s 2ms/step
+Test accuracy: 99.0
+Predictions :  Benign
+Actual :  Benign
